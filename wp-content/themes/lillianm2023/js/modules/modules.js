@@ -135,3 +135,78 @@ export function openCloseMobileMenu(dom) {
         html.classList.remove('mobile-menu-active');
     });
 }
+
+export function scrollToElement() {
+
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    if (!links) {
+        return;
+    }
+
+    links.forEach((link) => {
+
+        // Add a click event listener to the link
+        link.addEventListener("click", (event) => {
+
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            const href = event.target.closest('a').getAttribute("href");
+            const section = document.querySelector(href);
+            
+            const stickyHeaderHeight = document.querySelector('.header--sticky');
+
+            if(event.target.closest('.active')) {
+                event.target.closest('.active').classList.remove('active');
+                document.querySelector('html').classList.remove('mobile-menu-active');
+            }
+
+            if (!section && !stickyHeaderHeight) {
+                return;
+            }
+
+            // Calculate the distance to scroll
+            const sectionTop = section.offsetTop;
+            const currentOffset = window.pageYOffset;
+
+            const isAboveCurrentPosition  = sectionTop < window.pageYOffset;
+            const distanceToScroll = isAboveCurrentPosition ?  sectionTop - window.pageYOffset : sectionTop - window.pageYOffset;
+
+            // Set up the scroll animation
+            let startTime = null;
+            const duration = 1000;
+
+            function scrollAnimation(currentTime) {
+                if (startTime === null) {
+                    startTime = currentTime;
+                }
+
+                const timeElapsed = currentTime - startTime;
+                const scrollAmount = Math.easeInOutQuad(
+                    timeElapsed,
+                    currentOffset,
+                    distanceToScroll,
+                    duration
+                );
+
+                window.scrollTo(0, scrollAmount);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+
+            // Start the scroll animation
+            requestAnimationFrame(scrollAnimation);
+        });
+    });
+}
+
+// Easing function
+Math.easeInOutQuad = function(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+};

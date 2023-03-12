@@ -1,5 +1,5 @@
 import { HeroSlider } from './modules/hero-slider.js';
-import { addStickyClassToHeader, spinImageOnScroll, replaceSelectDropdown, closeAnnouncementBar, openCloseMobileMenu } from './modules/modules.js';
+import { addStickyClassToHeader, spinImageOnScroll, replaceSelectDropdown, closeAnnouncementBar, openCloseMobileMenu, scrollToElement } from './modules/modules.js';
 
 //activate hero slider
 const slider = new HeroSlider('.js-hero-slider', '.js-hero-slider-dots', 6000);
@@ -42,3 +42,6 @@ closeAnnouncementBar('.header__announcement-bar');
 
 // open and close mobile menu
 openCloseMobileMenu('.header__mobile');
+
+// Smooth scroll to anchor
+scrollToElement();

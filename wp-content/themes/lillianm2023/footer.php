@@ -27,7 +27,7 @@
                         <ul>
                             <?php while( has_sub_field('menu') ): ?>
                                 <?php $link = get_sub_field('link'); ?>
-                                <li><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></li>
+                                <li><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="scroll-to-anchor"><?php echo html_entity_decode($link['title']); ?></a></li>
                             <?php endwhile; ?>
                         </ul>
                         <?php endwhile; ?>

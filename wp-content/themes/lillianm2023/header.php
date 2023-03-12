@@ -49,7 +49,7 @@
 						<span class="header__social-text"><?php the_sub_field('text'); ?></span>
 						<?php $link = get_sub_field('social_link'); ?>
 						<?php if($link): ?>
-						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="header__social-link"><?php echo $link['title']; ?></a>
+						<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="header__social-link"><?php echo html_entity_decode($link['title']); ?></a>
 						<?php endif; ?>
 					</div>
 					<?php endwhile; ?>
@@ -66,7 +66,7 @@
 							<?php while( has_sub_field('menu') ): ?>
 								<?php $link = get_sub_field('link'); ?>
 								<?php if($link): ?>
-									<li><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo html_entity_decode($link['title']); ?></a></li>
+									<li><a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="scroll-to-anchor"><?php echo html_entity_decode($link['title']); ?></a></li>
 								<?php endif; ?>
 								<?php if( $count == floor($half) ): ?>
 									<li class="header-logo">
@@ -92,7 +92,7 @@
 						<?php $link = get_sub_field('link'); ?>
 						<?php if($link): ?>
 						<span class="arrow">
-							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+							<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="scroll-to-anchor"><?php echo $link['title']; ?></a>
 							<span class="icon-arrow icon-arrow--white"></span>
 							<span class="icon-arrow icon-arrow--gray"></span>
 						</span>
