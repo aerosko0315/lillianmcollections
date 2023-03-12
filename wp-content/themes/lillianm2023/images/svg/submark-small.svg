@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="90" height="90" transform="translate(0.109)" fill="#eeedea"/>
+    </clipPath>
+  </defs>
+  <g id="Stamp" transform="translate(-0.109)" clip-path="url(#clip-path)">
+    <path id="Path_22" data-name="Path 22" d="M44.819,89.64A44.819,44.819,0,1,1,89.639,44.82,44.87,44.87,0,0,1,44.819,89.64m0-88.813A43.993,43.993,0,1,0,88.812,44.82,44.043,44.043,0,0,0,44.819.827" transform="translate(0.47 0.431)" fill="#eeedea"/>
+    <path id="Path_23" data-name="Path 23" d="M99.811,64.471V64.18h-3.3L84.127,89.238,70.181,64.18H66.3v.232s1.1.232,1.1.985V83.342h.637V67.711L82.682,94.1l12.152-24.54V95.316c0,.868-1.041.926-1.041.926v.348h5.673v-.348s-1.044-.116-1.044-.983c0-24.944,0-29.573.291-30.154a2,2,0,0,1,1.1-.634" transform="translate(-32.356 -31.343)" fill="#eeedea"/>
+    <path id="Path_24" data-name="Path 24" d="M67.175,118.905c-.114.753-1.33,1.157-1.33,1.157v.348H69.2v-.348s-1.33-.4-1.389-1.157V112.3h-.637Z" transform="translate(-32.128 -55.165)" fill="#eeedea"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="3.159" height="3.159" transform="translate(69.662 62.612) rotate(-45)" fill="#eeedea"/>
+    <path id="Path_25" data-name="Path 25" d="M48.292,74.864V44.944c0-.812,1.041-.985,1.041-.985v-.289h-5.67v.348s1.041.114,1.041.926V74.864c0,.868-1.041.985-1.041.985v.289H64.978l-.453-.732c-9.509.013-16.233.2-16.233-.541" transform="translate(-21.147 -21.19)" fill="#eeedea"/>
+  </g>
+</svg>

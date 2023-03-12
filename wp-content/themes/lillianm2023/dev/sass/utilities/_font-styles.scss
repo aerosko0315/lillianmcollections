@@ -1,0 +1,189 @@
+:root {
+    --color-primary: #000000;
+    --color-ivory50: #E0DBD7;
+    --color-ivory25-lines: #E9E5E2;
+    --color-ivory25-bgs: #EEEDEA;
+    --color-dark-gray: #736763;
+    --color-medium-gray: #9C9390;
+    --color-gray: #B2AAA7;
+    --color-secondary: #FFFFFF;
+    --font-gildadisplay: 'gilda_displayregular';
+    --font-orpheuspro: "orpheuspro";
+    --font-adornstoryscript: 'adorn_story_scriptregular';
+    --font-gothiccondensed: 'tablet-gothic-condensed';
+    --font-gothicnarrow: 'tablet-gothic-narrow';
+    --font-sweetsanspro: 'sweet-sans-pro';
+    --font-socialicons: 'socialicons-allregular';
+}
+
+h1 {
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.15em;
+    font-family: var(--font-gildadisplay);
+    margin-top: 0;
+
+    @include max-breakpoint(mobile) {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-primary);
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    line-height: 1.35em;
+    font-family: var(--font-orpheuspro);
+    margin-top: 0;
+
+    @include max-breakpoint(mobile) {
+        font-size: 26px;
+    }
+
+    &.heading__italic, i {
+        color: var(--color-medium-gray);
+        font-size: 80px;
+        letter-spacing: 0em;
+        line-height: 0;
+        font-style: normal;
+        font-family: var(--font-adornstoryscript);
+
+        @include max-breakpoint(mobile) {
+            font-size: 76px;
+        }
+    }
+}
+
+h3 {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1em;
+    font-family: var(--font-gildadisplay);
+    margin-top: 0;
+
+    @include max-breakpoint(mobile) {
+        font-size: 42px;
+    }
+}
+
+h4 {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.15em;
+    font-family: var(--font-gildadisplay);
+    margin-top: 0;
+
+    @include max-breakpoint(mobile) {
+        font-size: 22px;
+    }
+}
+
+h5 {
+    color: var(--color-primary);
+    font-weight: 200;
+    font-style: normal;
+    font-size: 21px;
+    letter-spacing: 0.05em;
+    line-height: 1.4em;
+    font-family: var(--font-gothiccondensed);
+    margin-top: 0;
+}
+
+h6 {
+    color: var(--color-dark-gray);
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0.68em;
+    line-height: 1.4em;
+    font-family: var(--font-gothicnarrow);
+    margin-top: 0;
+}
+
+.arrow {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.icon-arrow {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 19px;
+        height: 15.38px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        margin-left: 10px;
+        @include transition;
+    }
+
+    &--white {       
+        &::before { 
+            background-image: url(images/svg/arrow-white.svg);
+        }
+    }
+
+    &--gray {     
+        &::before {    
+            background-image: url(images/svg/arrow-gray.svg);
+        }
+    }
+}
+
+.button {
+    @include font-style__h7;
+    text-decoration: none;
+    padding: 13px 41px 12px 38px;
+    display: inline-flex;
+    align-items: center;
+    @include transition;
+
+    &--gray {        
+        background-color: var(--color-ivory25-bgs);
+
+        &:hover {
+            background-color: var(--color-secondary);
+        }
+
+        &.hover--dark-gray:hover {
+            background-color: var(--color-medium-gray);
+            color: var(--color-secondary);
+        }
+
+        &.hover--dark-gray:hover .icon-arrow--gray::before {    
+            background-image: url(images/svg/arrow-white.svg);
+        }
+    }
+
+    &--white {
+        background-color: var(--color-secondary);
+
+        &:hover {
+            background-color: var(--color-medium-gray);
+            color: var(--color-secondary);
+        }
+
+        &:hover .icon-arrow--gray::before {    
+            background-image: url(images/svg/arrow-white.svg);
+        }
+    }
+    
+}

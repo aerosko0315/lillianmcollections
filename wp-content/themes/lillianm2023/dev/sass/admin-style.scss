@@ -1,0 +1,69 @@
+@import 'mixins/mixins';
+@import 'utilities/fonts';
+
+:root {
+    --color-primary: #000000;
+    --color-ivory50: #E0DBD7;
+    --color-ivory25-lines: #E9E5E2;
+    --color-ivory25-bgs: #EEEDEA;
+    --color-dark-gray: #736763;
+    --color-medium-gray: #9C9390;
+    --color-gray: #B2AAA7;
+    --color-secondary: #FFFFFF;
+    --font-gildadisplay: 'gilda_displayregular';
+    --font-orpheuspro: "orpheuspro";
+    --font-adornstoryscript: 'adorn_story_scriptregular';
+    --font-gothiccondensed: 'tablet-gothic-condensed';
+    --font-gothicnarrow: 'tablet-gothic-narrow';
+    --font-sweetsanspro: 'sweet-sans-pro';
+    --font-socialicons: 'socialicons-allregular';
+}
+
+.wp-block.editor-post-title__block {
+    max-width: 100%;
+}
+
+.wp-block {
+    max-width: 100%;
+}
+
+.editor-post-title {
+    background: #f3f3f4;
+}
+
+.block-editor-block-list__block {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wp-block .acf-block-preview,
+.wp-block:not(.is-selected) .acf-block-component.acf-block-body {    
+    @import 'utilities/font-styles';
+    @import "style";
+
+    .hero-slider {
+        &__item {
+            display: none;
+        }
+
+        &__item:first-child {
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+.wp-block:not(.is-selected) .acf-block-component.acf-block-body .career-list .exp-app {
+    background-color: #FFDEDE!important;
+    color: #fff!important;
+}
+
+.wp-block.is-selected {
+    z-index: 10;
+    position: relative;
+}
+
+.wp-block button.components-button.block-editor-inserter__toggle {
+    position: relative;
+    z-index: 10;
+}

@@ -1,0 +1,53 @@
+/* Style the custom select container */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Style the selected option */
+  .selected-option {
+    display: block;
+    padding: 8px 16px;
+  }
+  
+  /* Style the options list */
+  .options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Style the options list items */
+  .options-list li {
+    display: block;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* Style the selected option when the options list is open */
+  .custom-select.open .selected-option {
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+  }
+  
+  /* Style the options list when it is open */
+  .custom-select.open .options-list {
+    display: block;
+  }
