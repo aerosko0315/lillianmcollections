@@ -127,7 +127,7 @@
 		</div>
 	</header>
 
-	<div class="header__mobile">
+	<div class="header__mobile header__mobile--option2">
 		<div class="header__mobile-close">
 			<span class="header__mobile-close-btn js-close-mobile-menu">
 				<span class="header__mobile-close-btn-text">Close the <span>menu</span></span>

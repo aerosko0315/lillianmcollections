@@ -485,7 +485,44 @@
                 color: var(--color-dark-gray);
             }
         }
-    }
+
+        &--option2 &-navigation {
+            text-align: left;
+            padding-left: 67px;
+
+            &-ul {
+                margin-bottom: 45px;
+
+                li {
+                    margin-bottom: 22px;
+
+                    a {
+                        @include font-style__body--small;
+                        font-size: 26px;
+                        color: var(--color-dark-gray);
+                        display: inline-block;
+                        line-height: 1.2em;
+
+                        span {
+                            @include font-style__body--small;
+                            font-size: 26px;
+                            display: block;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--option2 &-footer {
+            justify-content: flex-start;
+            padding-left: 67px;
+        }
+
+        &--option2 &-social {
+            text-align: left;
+        }
+    }    
 
     &--sticky {
         position: fixed;
